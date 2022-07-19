@@ -1,0 +1,200 @@
+<script>
+import Popper from "vue3-popper";
+
+export default {
+    components: {
+        Popper
+    },
+    props: ['id', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'curseCost', 'effect', 'description'],
+}
+</script>
+
+<template>
+    <div class="item">
+        <Popper hover>
+            <img class="lazy" :src="imageUrl" alt="" />
+            <template #content>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div class="item-id">Index no. {{ id }}</div>
+                        <div class="item-name">{{ name }}</div>
+                    </div>
+                    <div class="item-subname">{{ subName }}</div>
+                    <div class="divider"></div>
+                    <div class="item-type">Type: <span>Relic</span></div>
+                    <div :class="'item-rarity ' + rarity">Rarity: <span>{{ rarity }}</span></div>
+                    <div class="item-craftingcost">Crafting cost: <span>{{ craftingCost }}</span></div>
+                    <div class="item-shopcost">Shop cost: <span>{{ shopCost }}</span></div>
+                    <div class="item-cursecost">Curse cost: <span>{{ curseCost }}</span></div>
+                    <div class="item-effect">Effect: <span>{{ effect }}</span></div>
+                    <div class="item-type">Description: <span>{{ description }}</span></div>
+                </div>
+            </template>
+        </Popper>
+    </div>
+</template>
+
+
+<style lang="scss">
+.popover-body,
+.item-info {
+    width: 500px;
+    background-color: #001B24;
+    pointer-events: none;
+    z-index: 99;
+    padding: 20px;
+    border-color: #000F14;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+
+    &.show {
+        display: block;
+    }
+
+    .divider {
+        background: white;
+        height: 2px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    div {
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .item-description span {
+        color: #a38662;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .item-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .item-id {
+        color: #a38662;
+        font-weight: 600;
+        position: absolute;
+        bottom: -20px;
+        font-size: 12px;
+    }
+
+    .item-name {
+        color: white;
+        text-decoration: underline;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .item-subname {
+        color: green;
+        text-align: center;
+    }
+
+    .item-type {
+        color: white;
+
+        .curse {
+            color: #A38662;
+        }
+
+        span {
+            color: #e8ab43;
+            font-weight: 600;
+        }
+    }
+
+    .item-rarity {
+        &.Common span {
+            color: #6f543f;
+            font-weight: 600;
+        }
+
+        &.Legendary span {
+            color: #cd0e20;
+            font-weight: 600;
+        }
+
+        &.Rare span {
+            color: #cd770e;
+            font-weight: 600;
+        }
+    }
+
+    .item-craftingcost {
+        span {
+            color: #c88aff;
+            position: relative;
+            margin-left: 20px;
+            font-weight: 600;
+
+            &:before {
+                content: "";
+                background-image: url("src/assets/images/gems/Thorium1.png");
+                position: absolute;
+                width: 20px;
+                height: 30px;
+                background-size: 85%;
+                background-repeat: no-repeat;
+                left: -19px;
+                top: 0px;
+            }
+        }
+    }
+
+    .item-shopcost {
+        span {
+            color: #ffb400;
+            position: relative;
+            margin-left: 20px;
+            font-weight: 600;
+
+            &:before {
+                content: "";
+                background-image: url("src/assets/images/gems/Gold10.png");
+                position: absolute;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-repeat: no-repeat;
+                left: -19px;
+                top: 3px;
+            }
+        }
+    }
+
+    .item-cursecost {
+        span {
+            color: #c88aff;
+            position: relative;
+            margin-left: 20px;
+            font-weight: 600;
+
+            &:before {
+                content: "";
+                background-image: url("src/assets/images/gems/MajorCurse.png");
+                position: absolute;
+                width: 20px;
+                height: 30px;
+                background-size: 85%;
+                background-repeat: no-repeat;
+                left: -19px;
+                top: 0px;
+            }
+        }
+    }
+
+    .item-effect {
+        span {
+            color: #A38662;
+            font-weight: 600;
+        }
+    }
+}
+</style>
