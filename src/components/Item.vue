@@ -5,14 +5,14 @@ export default {
     components: {
         Popper
     },
-    props: ['id', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'curseCost', 'effect', 'description'],
+    props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description'],
 }
 </script>
 
 <template>
     <div class="item">
         <Popper hover>
-            <img class="lazy" :src="imageUrl" alt="" />
+            <img v-lazy="imageUrl" />
             <template #content>
                 <div class="item-info">
                     <div class="item-header">
@@ -21,13 +21,15 @@ export default {
                     </div>
                     <div class="item-subname">{{ subName }}</div>
                     <div class="divider"></div>
-                    <div class="item-type">Type: <span>Relic</span></div>
+                    <div :class="'curse-type ' + curseType" v-if="curseType">Type: <span>{{ curseType }} curse</span></div>
+                    <div :class="'item-type ' + itemType" v-else>Type: <span>{{ itemType }}</span></div>
                     <div :class="'item-rarity ' + rarity">Rarity: <span>{{ rarity }}</span></div>
                     <div class="item-craftingcost">Crafting cost: <span>{{ craftingCost }}</span></div>
                     <div class="item-shopcost">Shop cost: <span>{{ shopCost }}</span></div>
-                    <div class="item-cursecost">Curse cost: <span>{{ curseCost }}</span></div>
+                    <div class="item-minor-curse-cost item-curse-cost">Minor curse cost: <span>{{ minorCurseCost }}</span></div>
+                    <div class="item-major-curse-cost item-curse-cost">Major curse cost: <span>{{ majorCurseCost }}</span></div>
                     <div class="item-effect">Effect: <span>{{ effect }}</span></div>
-                    <div class="item-type">Description: <span>{{ description }}</span></div>
+                    <div class="item-description">Description: <span>{{ description }}</span></div>
                 </div>
             </template>
         </Popper>
@@ -64,10 +66,48 @@ export default {
         color: white;
     }
 
+    .item-curse-cost {
+        span {
+            color: #C785E6;
+            margin-left: 20px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                top: -1px;
+            }
+        }
+    }
+
+    .item-minor-curse-cost span::before {
+        background-image: url("src/assets/images/gems/MinorCurse.png");
+        left: -20px;
+
+    }
+
+    .item-major-curse-cost span::before {
+        background-image: url("src/assets/images/gems/MajorCurse.png");
+        width: 15px;
+        left: -17px;
+    }
+
     .item-description span {
-        color: #a38662;
-        font-weight: 100;
+        color: #fff;
+        font-weight: 300;
         font-style: italic;
+    }
+
+    .curse-type {
+
+        &.Major span,
+        &.Minor span {
+            color: #e087b9
+        }
     }
 
     .item-header {
@@ -105,14 +145,14 @@ export default {
         }
 
         span {
-            color: #e8ab43;
+            color: #a38662;
             font-weight: 600;
         }
     }
 
     .item-rarity {
         &.Common span {
-            color: #6f543f;
+            color: #ffffff;
             font-weight: 600;
         }
 
@@ -169,7 +209,7 @@ export default {
         }
     }
 
-    .item-cursecost {
+    .item-minorCurseCost {
         span {
             color: #c88aff;
             position: relative;

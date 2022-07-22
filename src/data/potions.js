@@ -9,7 +9,8 @@ var potionList =
             'effect': 'Recovers health',
             'description': 'Made from dissolving ground, dried canaba leaf in alcohol.',
             'id': '1',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/8/84/Apprentice%27s_Tincture.png',
@@ -19,7 +20,8 @@ var potionList =
             'effect': 'Recovers a random amount of health',
             'description': "A healing potion created by an apprentice who hadn't quite perfected their craft.",
             'id': '2',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/09/Salvaging_Sludge.png',
@@ -30,7 +32,8 @@ var potionList =
             'effect': 'Recover health for each carried curse',
             'description': 'The liquid moves slowly. Often requiring a knife be inserted into the bottle to get things moving.',
             'id': '3',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/b/b9/Troll_Sweat.png',
@@ -41,7 +44,8 @@ var potionList =
             'effect': 'Regenerate health over time',
             'description': '"You want to make sure your troll is hydrated if you\'re to extract the good stuff." - Dirk, the Alchemist',
             'id': '4',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/3/35/Ghostly_Ichor.png',
@@ -52,7 +56,8 @@ var potionList =
             'effect': 'Heal over time for each curse',
             'description': 'Scentless fumes arise from the liquid, rejuvenating tired bones.',
             'id': '5',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/9/97/Cure_All.png',
@@ -63,7 +68,8 @@ var potionList =
             'effect': 'Create a circle of healing',
             'description': '"You get healed, and you get healed... you all get healed!" - Black Rabbit',
             'id': '6',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/e/e9/Coffee.png',
@@ -74,7 +80,8 @@ var potionList =
             'effect': 'Recover health proportional to missing health',
             'description': "Peasants often drink something called miner's coffee. Brewed in a process you don't want to know.",
             'id': '7',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/43/Elixir.png',
@@ -85,7 +92,8 @@ var potionList =
             'effect': 'Restores all missing health',
             'description': 'A potion of such extreme value that they are often hoarded and never used.',
             'id': '8',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/b/b8/Rainbow_Kernels.png',
@@ -96,7 +104,8 @@ var potionList =
             'effect': 'Duplicate almost everything in the room',
             'description': 'These kernels are ready to party.',
             'id': '9',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/1/1c/Golden_Kernels.png',
@@ -107,7 +116,8 @@ var potionList =
             'effect': 'Duplicate all gold in the room',
             'description': 'A vial of golden popcorn kernels. They vibrate with anticipation.',
             'id': '10',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/d/df/Popcorn_Kernels.png',
@@ -118,7 +128,8 @@ var potionList =
             'effect': 'Duplicate all basic items in the room',
             'description': 'A vial of popcorn kernels. They vibrate with anticipation.',
             'id': '11',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/1/10/Seasoned_Kernels.png',
@@ -129,7 +140,8 @@ var potionList =
             'effect': 'Duplicate all food in the room',
             'description': 'A vial of well seasoned popcorn kernels. They vibrate with anticipation.',
             'id': '12',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/f/fd/Whiplash_Serum.png',
@@ -140,7 +152,8 @@ var potionList =
             'effect': 'Temporarily increases throw damage',
             'description': "Wrix developed a potion that matches one's throwing form perfectly with that of the goblin bat riders of Urr.",
             'id': '13',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/e/ed/Strength_Serum.png',
@@ -151,7 +164,8 @@ var potionList =
             'effect': 'Temporarily increases swing damage',
             'description': 'Developed by the goblin alchemist Wrix who studied and was inspired by the strength of the feral orcs.',
             'id': '14',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/3/3a/Savagery_Serum.png',
@@ -162,7 +176,8 @@ var potionList =
             'effect': 'Temporarily increases critical chance',
             'description': "There is no secret to this potion. It is simply orc blood, extracted while under the influence of bloodlust. That doesn't make it easy to come by though.",
             'id': '15',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/6a/Alacrity_Serum.png',
@@ -173,7 +188,8 @@ var potionList =
             'effect': 'Temporarily increases attack speed',
             'description': 'Some say that the origins of this potion lead back to a goblin alchemist and that the recipe was stolen by the human kingdom of Delvemore.',
             'id': '16',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/e/e3/Sundering_Serum.png',
@@ -184,7 +200,8 @@ var potionList =
             'effect': 'Temporarily increases swing size',
             'description': 'A common potion found in goblin logging camps.',
             'id': '17',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/b/b4/Cyclonic_Serum.png',
@@ -195,7 +212,8 @@ var potionList =
             'effect': 'Temporarily increases throw size',
             'description': 'The brewing process begins with capturing a powerful gust of wind from atop Mt. Thessal.',
             'id': '18',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/c/cd/Durability_Serum.png',
@@ -206,7 +224,8 @@ var potionList =
             'effect': 'Temporarily increases health',
             'description': 'The first, unrefined versions were made by coastal trolls that would mix crushed turtle shells with their own blood.',
             'id': '19',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/2/25/Holy_Water.png',
@@ -217,7 +236,8 @@ var potionList =
             'effect': 'Remove a curse',
             'description': 'Apothecaries often overcharge for holy water knowing they have the market cornered.',
             'id': '20',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/4c/Purge_Potion.png',
@@ -228,7 +248,8 @@ var potionList =
             'effect': 'Removes a curse and deals 75 damage',
             'description': 'Sometimes the good must suffer in order for evil to be purged from the world.',
             'id': '21',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/b/b0/Purification_Potion.png',
@@ -239,7 +260,8 @@ var potionList =
             'effect': 'Removes all curses, bombs, keys, and sets health to 1',
             'description': 'To obtain absolution, one must purge themselves of all worldly attachments.',
             'id': '22',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/02/Aether.png',
@@ -250,7 +272,8 @@ var potionList =
             'effect': 'Remove a specific curse',
             'description': 'An exceptionally hard to find potion, as there is only a single alchemist in the kingdom that knows its recipe.',
             'id': '23',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/8/81/Absolution.png',
@@ -261,7 +284,8 @@ var potionList =
             'effect': 'If you have exactly 5 curses, removes 5 curses',
             'description': 'A powerful potion that works under oddly specific conditions.',
             'id': '24',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/4b/Doubling_Saison.png',
@@ -272,7 +296,8 @@ var potionList =
             'effect': 'Double your bombs',
             'description': 'A farmhouse style brew, with a clean taste and low alcohol content. Served as a clean source of hydration for peasants.',
             'id': '25',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/1/1d/Impish_Key_Bomb.png',
@@ -283,7 +308,8 @@ var potionList =
             'effect': 'Swap your items around',
             'description': '"I\'m not sure if it actually changes your items, or if it just messes you up so bad you think it did." - Dirk, The Alchemist',
             'id': '26',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/b/b4/Iron_Glaze.png',
@@ -294,7 +320,8 @@ var potionList =
             'effect': 'Average the number of held keys and bombs',
             'description': 'Instantly reacts with iron, making it pliable without increasing its temperature.',
             'id': '27',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/4e/Holy_Glaze.png',
@@ -305,7 +332,8 @@ var potionList =
             'effect': 'Average the levels of all blessings',
             'description': "Peasants that don't diversify their skill sets often end up terminated. Killed that is.",
             'id': '28',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/a/a2/Ambrosia.png',
@@ -316,7 +344,8 @@ var potionList =
             'effect': 'Double the level of a random blessing',
             'description': 'Actually a very secular drink, made with blended grass and orange juice.',
             'id': '29',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/49/Nitroglycerin.png',
@@ -327,7 +356,8 @@ var potionList =
             'effect': 'Drop bombs continuously',
             'description': 'Ultra miniaturization and rapid enlargement are two critical fields of study in alchemy. They are both taught at the Arcane Sanctum.',
             'id': '30',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/03/Auglycerin.png',
@@ -338,7 +368,8 @@ var potionList =
             'effect': 'Drop gold continuously',
             'description': 'This potion was created at the request of a very wealthy lord who wanted to hide his vast fortune.',
             'id': '31',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/f/f7/Immolation_Potion.png',
@@ -349,7 +380,8 @@ var potionList =
             'effect': 'Burns nearby enemies',
             'description': 'Douse yourself in a living flame that only has hunger for your enemies.',
             'id': '32',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/8/81/Float_Potion.png',
@@ -360,7 +392,8 @@ var potionList =
             'effect': 'Avoid falling into holes',
             'description': 'Warning: Make sure to be on firm ground when the effects wear off.',
             'id': '33',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/0e/Selt%27s_Blood.png',
@@ -370,7 +403,8 @@ var potionList =
             'effect': 'Spawn larvae',
             'description': "A drop of Selt's blood was used to synthesize a potion that can replicate her reproductive capabilities.",
             'id': '34',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/43/Blood_Chalice.png',
@@ -381,7 +415,8 @@ var potionList =
             'effect': 'Consumes 25% health, drops items and sometimes another Blood Chalice',
             'description': 'A golden goblet with flecks of crimson. It rewards those willing to pay a sacrifice.',
             'id': '35',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/05/Fury_Potion.png',
@@ -392,7 +427,8 @@ var potionList =
             'effect': 'Fire some fireballs',
             'description': 'Peering into the bottle reveals a vortex of fireballs, writhing in furor.',
             'id': '36',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/c/cd/Antimatter.png',
@@ -403,7 +439,8 @@ var potionList =
             'effect': 'The next time you would take damage, gain that much health instead',
             'description': 'The most brutal axe cleave becomes a soothing bath of vitality in what can only be described as magic.',
             'id': '37',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/c/cb/Bottled_Pilfer.png',
@@ -414,7 +451,8 @@ var potionList =
             'effect': 'Releases a Hoarding Pilfer',
             'description': 'A bottle containing one Hoarding Pilfer, dozens of axe pommels, and countless smooth rocks.',
             'id': '38',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/5/5b/Shop_in_a_Bottle.png',
@@ -425,7 +463,8 @@ var potionList =
             'effect': 'Discover the secret shop',
             'description': 'Miniature wizards miniaturized a shop and put it in a regular sized bottle.',
             'id': '39',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/a/a1/Bottles_in_a_Bottle.png',
@@ -436,7 +475,8 @@ var potionList =
             'effect': 'Drop two potions',
             'description': 'Made by an artisan with a good sense of irony.',
             'id': '40',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/3/3f/Chest_in_a_Bottle.png',
@@ -447,7 +487,8 @@ var potionList =
             'effect': 'Drop a random chest',
             'description': 'A big fad during the Enlightenment was to have a replica chest in a bottle on your bookshelf.',
             'id': '41',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/e/e7/TRANSMUT3_in_a_Bottle.png',
@@ -458,7 +499,8 @@ var potionList =
             'effect': 'Add a TRANSMUT3 to the room',
             'description': '"Miniaturization technology and transmutation technology? What a time to be alive." - Unknown Alchemist',
             'id': '42',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/6b/Altar_in_a_Bottle.png',
@@ -469,7 +511,8 @@ var potionList =
             'effect': 'Spawn an altar',
             'description': 'Travelling monks often carried these incase they had to perform an emergency blessing.',
             'id': '43',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/9/91/Doppelbock.png',
@@ -480,7 +523,8 @@ var potionList =
             'effect': 'Summon a doppelganger to work alongside you',
             'description': 'Peasants would often use Doppelbock to sneak away for a quick nap with no one noticing their absence.',
             'id': '44',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/0/0c/Transmutagen.png',
@@ -491,7 +535,8 @@ var potionList =
             'effect': 'Transforms all relics in the room',
             'description': "It's unclear whether we will ever learn the secret of this ooze.",
             'id': '45',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/8/8d/Metamorphim.png',
@@ -502,7 +547,8 @@ var potionList =
             'effect': 'Transmute a carried relic',
             'description': 'Dropping any object into this shifting liquid will quickly mutate it into something familiar but different.',
             'id': '46',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/6c/Mighty_Metamorphim.png',
@@ -513,7 +559,8 @@ var potionList =
             'effect': 'Transmute all carried relics',
             'description': 'The Metamorphim change is a five step process. Mighty Metamorphim combines those into a single, more efficient process.',
             'id': '47',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/a/a8/Circle_of_Transmutation.png',
@@ -524,7 +571,8 @@ var potionList =
             'effect': 'Transmutes items in a small circle, but makes them fragile',
             'description': 'Bends matter in a small area, but the process is incredibly strenuous.',
             'id': '48',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/e/e6/Berserker%27s_Brew.png',
@@ -534,7 +582,8 @@ var potionList =
             'effect': 'Deal and take more damage',
             'description': 'A brew that stirs the drinker into a ferocious rage, making them dangerous to their enemies and themselves.',
             'id': '49',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/c/c3/Ghost_Pepper_Sauce.png',
@@ -545,7 +594,8 @@ var potionList =
             'effect': 'Become immune to fire damage and ignite yourself',
             'description': 'Protects against physical burns, but not emotional ones.',
             'id': '50',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/5/58/Toadvine%27s_Tonic.png',
@@ -555,7 +605,8 @@ var potionList =
             'effect': 'Become immune to poison, if you can survive it',
             'description': "Tastes so foul, you'd swear it was brewed in a boot, and you'd be right.",
             'id': '51',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/4c/Numbing_Cream.png',
@@ -566,7 +617,8 @@ var potionList =
             'effect': 'Reduce incoming damage',
             'description': 'Particularly useful after a hard day in the goldmine, or during a hard day in the goldmine.',
             'id': '52',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/2/2f/Potion_of_True_Sight.png',
@@ -577,7 +629,8 @@ var potionList =
             'effect': 'Discover nearby secrets',
             'description': 'Nicknamed the "peeper\'s potion" for obvious reasons.',
             'id': '53',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/2/28/Potion_of_Plenty.png',
@@ -588,7 +641,8 @@ var potionList =
             'effect': 'Drop some useful things',
             'description': '"Be prepared for any situation." - Norin, the Responsible',
             'id': '54',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/6c/Protein_Shake.png',
@@ -599,7 +653,8 @@ var potionList =
             'effect': 'Drop some protein',
             'description': "It's not so much about bulking up, it's more about surviving winter.",
             'id': '55',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/62/Blessed_Blend.png',
@@ -610,7 +665,8 @@ var potionList =
             'effect': 'Drops a blessing',
             'description': 'Carried by the priests of the sanctum, just in case.',
             'id': '56',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/5/5c/Toxin.png',
@@ -621,7 +677,8 @@ var potionList =
             'effect': 'Coat your weapon with poison',
             'description': "A thick, black oil consisting of venom from the kingdom's deadliest creatures. This poison acts quickly, reducing movement and inflicting pain.",
             'id': '57',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/49/Witch%27s_Brew.png',
@@ -631,7 +688,8 @@ var potionList =
             'effect': 'Become cursed',
             'description': 'Baba, during her apprenticeship, accidentally brewed this cursed potion. She tried to bury her shame, but it refused to remain hidden.',
             'id': '58',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/a/ae/Freeloader_Draught.png',
@@ -642,7 +700,8 @@ var potionList =
             'effect': 'Get something for nothing',
             'description': '"You can\'t always get what you want. But if you try sometimes, you might just find, you get it for free." - Proverb',
             'id': '59',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/f/f5/Biscuits.png',
@@ -653,7 +712,8 @@ var potionList =
             'effect': 'Increases experience gain for a familiar',
             'description': 'Beltrame, as part of her apprenticeship, developed a treat loved by all small creatures.',
             'id': '60',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/4b/Midas_Touch.png',
@@ -664,7 +724,8 @@ var potionList =
             'effect': 'All enemies are turned to gold',
             'description': 'A label affixed to the bottom reads: "Warning: Do not ingest."',
             'id': '61',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/f/f4/Kiss_of_the_Succubus.png',
@@ -675,7 +736,8 @@ var potionList =
             'effect': 'Kill all enemies and steal their health',
             'description': 'Made with the blood of a succubus, which is incredibly hard to come by.',
             'id': '62',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/6/6e/All-Potion.png',
@@ -686,7 +748,8 @@ var potionList =
             'effect': 'Is whatever you need it to be',
             'description': "Dirk's crowning achievement as an alchemist. A potion so powerful the recipe needed to be divided amongst laboratories to keep it hidden.",
             'id': '63',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/f/fb/Some-Potion.png',
@@ -697,7 +760,8 @@ var potionList =
             'effect': 'Is whatever you need it to be, sometimes',
             'description': 'A very fluid potion, in more ways than one.',
             'id': '64',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/1/1d/Starlight_Sip.png',
@@ -708,7 +772,8 @@ var potionList =
             'effect': 'Pull the heavens down onto your foes',
             'description': 'A stern warning adorns the bottle: "More than a sip may cause extinction!"',
             'id': '65',
-            'rarity': 'Rare'
+            'rarity': 'Rare',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/1/12/Churchbell_Nectar.png',
@@ -719,7 +784,8 @@ var potionList =
             'effect': 'Creates a temporary Churchbell shield',
             'description': 'An aromatic oil that wards off harm in small doses.',
             'id': '66',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/4/45/Pangolin_Potion.png',
@@ -730,7 +796,8 @@ var potionList =
             'effect': 'Refills four armor points',
             'description': 'In case of imminent danger curl up and form a ball. Step two, roll on away from that danger.',
             'id': '67',
-            'rarity': 'Common'
+            'rarity': 'Common',
+            'itemType': 'Potion'
         },
         {
             'imageUrl': 'https://undermine.wiki.gg/images/a/a3/Stoneforge_Broth.png',
@@ -741,7 +808,8 @@ var potionList =
             'effect': 'Gain a legendary relic',
             'description': 'Clear your mind and wish deep. That which you desire may become yours, or perhaps not.',
             'id': '68',
-            'rarity': 'Legendary'
+            'rarity': 'Legendary',
+            'itemType': 'Potion'
         }
     ]
 

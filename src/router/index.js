@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/Items.vue'
+import Items from '../views/Items.vue'
 import Curses from '../views/Curses.vue'
 import Potions from '../views/Potions.vue'
 
@@ -9,7 +9,7 @@ const router = createRouter({
         {
             path: '/relics',
             name: 'relics',
-            component: HomeView
+            component: Items
         },
         {
             path: '/curses',

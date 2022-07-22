@@ -13,39 +13,37 @@ export default {
     watch: {},
     methods: {
     },
-    mounted() {}
+    mounted() { }
 }
 
 </script>
 
 <template>
-    <div class="container">
-        <div class="wrapper">
+    <div class="wrapper">
+        <div class="container">
             <header>
-                <div class="header">
-                    <div class="tabs">
-                        <RouterLink to="/relics" class="tab-link">
-                            <div class="tab tab-relics active" data-tab="items">
-                                Relics
-                            </div>
-                            <div class="line line-left"></div>
-                            <div class="line line-right"></div>
-                        </RouterLink>
-                        <RouterLink to="/curses" class="tab-link">
-                            <div class="tab tab-curses" data-tab="curses">
-                                Curses
-                            </div>
-                            <div class="line line-left"></div>
-                            <div class="line line-right"></div>
-                        </RouterLink>
-                        <RouterLink to="/potions" class="tab-link">
-                            <div class="tab tab-potions" data-tab="potions">
-                                Potions
-                            </div>
-                            <div class="line line-left"></div>
-                            <div class="line line-right"></div>
-                        </RouterLink>
-                    </div>
+                <div class="tabs">
+                    <RouterLink to="/relics" class="tab-link">
+                        <div class="tab tab-relics active">
+                            Relics
+                        </div>
+                        <div class="line line-left"></div>
+                        <div class="line line-right"></div>
+                    </RouterLink>
+                    <RouterLink to="/curses" class="tab-link">
+                        <div class="tab tab-curses">
+                            Curses
+                        </div>
+                        <div class="line line-left"></div>
+                        <div class="line line-right"></div>
+                    </RouterLink>
+                    <RouterLink to="/potions" class="tab-link">
+                        <div class="tab tab-potions">
+                            Potions
+                        </div>
+                        <div class="line line-left"></div>
+                        <div class="line line-right"></div>
+                    </RouterLink>
                 </div>
             </header>
             <RouterView />
@@ -55,23 +53,10 @@ export default {
 
 <style lang="scss">
 .wrapper {
-    background: url(src/assets/images/checker.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: url(src/assets/images/checker.png) center center/cover;
 }
 
-.hide {
-    display: none;
-}
-
-.header {
-    position: relative;
+header {
 
     .tabs {
         display: flex;
@@ -96,6 +81,18 @@ export default {
 
             .line-right {
                 left: -20px;
+            }
+
+            &:hover {
+                .line-left {
+                    right: 20px;
+                    opacity: 1;
+                }
+
+                .line-right {
+                    left: 20px;
+                    opacity: 1;
+                }
             }
 
             &.router-link-active {
@@ -124,51 +121,6 @@ export default {
                 cursor: pointer;
             }
         }
-    }
-}
-
-.items,
-.curses,
-.potions {
-    flex-wrap: wrap;
-    position: relative;
-    transition: all 0.3s ease;
-    display: none;
-    justify-content: space-between;
-    margin-bottom: 150px;
-    padding: 20px 0;
-
-    &.active {
-        display: flex;
-    }
-
-    .item {
-        width: 70px;
-        height: 70px;
-        margin: 0 10px;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 30px;
-
-        img {
-            transition: all 0.3s ease;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            img {
-                transform: scale(1.2);
-            }
-        }
-    }
-
-    &:after {
-        content: "";
-        flex: auto;
     }
 }
 </style>

@@ -14,20 +14,27 @@ export default {
             curses: [],
             data: [],
             input: '',
-            filteredData: []
+            noData: false
         }
+    },
+    computed: {
+
     },
     methods: {
         itemSearch() {
             let result = itemList
-            if (!this.input)
+            if (!this.input) {
+                this.calculateHeight()
                 return result
+            }
+
             const filter = event =>
                 event.name.toLowerCase().includes(this.input) ||
                 event.description.toLowerCase().includes(this.input) ||
                 event.rarity.toLowerCase().includes(this.input)
 
             this.data = result.filter(filter)
+            this.calculateHeight()
         },
         returnCorrectData() {
             if (this.$route.name == 'relics') {
@@ -37,6 +44,16 @@ export default {
             } else {
                 this.data = potionList
             }
+        },
+        calculateHeight() {
+            setTimeout(() => {
+                var height = document.querySelector('.container').clientHeight
+                if (height < 800) {
+                    document.querySelector('.wrapper').style.height = '100vh'
+                } else {
+                    document.querySelector('.wrapper').style.height = height + 70 + 'px'
+                }
+            }, 50);
         }
     },
     watch: {
@@ -51,6 +68,7 @@ export default {
     },
     mounted: function () {
         this.returnCorrectData()
+        this.calculateHeight()
     }
 }
 </script>
@@ -59,9 +77,10 @@ export default {
     <div class="search-wrapper">
         <input id="search" class="search" type="text" placeholder="Search by title, id, effect & description" @keyup="itemSearch()" v-model="input">
     </div>
-    <div class="items active" data-section="items">
-        <Item v-for="item in data" :key="item.id" :id="item.id" :name="item.name" :rarity="item.rarity" :craftingCost="item.craftingCost" :shopCost="item.shopCost"
-            :curseCost="item.curseCost" :effect="item.effect" :description="item.description" :imageUrl="item.imageUrl" />
+    <div class="items">
+        <Item v-for="item in data" :key="item.id" :id="item.id" :name="item.name" :itemType="item.itemType" :rarity="item.rarity" :craftingCost="item.craftingCost"
+            :curseType="item.curseType" :shopCost="item.shopCost" :minorCurseCost="item.minorCurseCost" :majorCurseCost="item.majorCurseCost" :effect="item.effect"
+            :description="item.description" :imageUrl="item.imageUrl" />
     </div>
 </template>
 
@@ -72,14 +91,9 @@ export default {
     flex-wrap: wrap;
     position: relative;
     transition: all 0.3s ease;
-    display: none;
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
     padding: 20px 0;
-
-    &.active {
-        display: flex;
-    }
 
     .item {
         width: 70px;
@@ -108,6 +122,14 @@ export default {
     &:after {
         content: "";
         flex: auto;
+    }
+}
+
+.no-data {
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        color: white;
     }
 }
 </style>
