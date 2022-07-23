@@ -182,6 +182,10 @@ export default {
             color: #a38662;
             font-weight: 600;
         }
+
+        &.Hex span {
+            color: #b495f3;
+        }
     }
 
     .item-rarity {
