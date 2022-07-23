@@ -68,7 +68,7 @@ export default {
     },
     mounted: function () {
         this.returnCorrectData()
-        this.calculateHeight()
+        // this.calculateHeight()
     }
 }
 </script>
@@ -85,11 +85,9 @@ export default {
 </template>
 
 <style lang="scss">
-.items,
-.curses,
-.potions {
+.items {
     flex-wrap: wrap;
-    position: relative;
+    // position: relative;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;
@@ -103,7 +101,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        // position: relative;
         margin-bottom: 30px;
 
         img {
@@ -122,14 +120,6 @@ export default {
     &:after {
         content: "";
         flex: auto;
-    }
-}
-
-.no-data {
-    h2 {
-        font-size: 2rem;
-        text-align: center;
-        color: white;
     }
 }
 </style>

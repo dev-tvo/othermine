@@ -5,13 +5,42 @@ export default {
     components: {
         Popper
     },
+    data() {
+        return {
+            showInfo: false,
+        }
+    },
     props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description'],
 }
 </script>
 
 <template>
     <div class="item">
-        <Popper hover>
+        <img v-lazy="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" />
+        <div class="item-info" v-if="showInfo">
+            <div class="item-header">
+                <div class="item-id">Index no. {{ id }}</div>
+                <div class="item-name">{{ name }}</div>
+                <div class="item-description"><span>{{ description }}</span></div>
+            </div>
+            <div class="item-subname">{{ subName }}</div>
+            <div class="divider"></div>
+            <div :class="'curse-type ' + curseType" v-if="curseType">Type: <span>{{ curseType }} curse</span></div>
+            <div :class="'item-type ' + itemType" v-else>Type: <span>{{ itemType }}</span></div>
+            <div :class="'item-rarity ' + rarity">Rarity: <span>{{ rarity }}</span></div>
+            <div class="item-effect">Effect: <span>{{ effect }}</span></div>
+            <div class="item-shopcost">Shop cost: <span>{{ shopCost }}</span></div>
+            <div class="item-craftingcost">Crafting cost: <span>{{ craftingCost }}</span></div>
+            <div class="item-minor-curse-cost item-curse-cost">Minor curse cost: <span>{{ minorCurseCost }}</span></div>
+            <div class="item-major-curse-cost item-curse-cost">Major curse cost: <span>{{ majorCurseCost }}</span></div>
+
+        </div>
+    </div>
+</template>
+<!--
+<template>
+    <div class="item">
+        <Popper locked="true" hover>
             <img v-lazy="imageUrl" />
             <template #content>
                 <div class="item-info">
@@ -34,25 +63,26 @@ export default {
             </template>
         </Popper>
     </div>
-</template>
-
+</template> -->
 
 <style lang="scss">
 .popover-body,
 .item-info {
-    width: 500px;
-    background-color: #001B24;
-    pointer-events: none;
-    z-index: 99;
-    padding: 20px;
-    border-color: #000F14;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 2px;
-
-    &.show {
-        display: block;
-    }
+    width: 300px;
+    left: 0;
+    position: fixed;
+    top: 0px;
+    padding: 30px 20px 0 20px;
+    height: 100%;
+    // width: 500px;
+    // background-color: #001B24;
+    // pointer-events: none;
+    // z-index: 99;
+    // padding: 20px;
+    // border-color: #000F14;
+    // border-radius: 10px;
+    // border-style: solid;
+    // border-width: 2px;
 
     .divider {
         background: white;
@@ -70,6 +100,7 @@ export default {
         span {
             color: #C785E6;
             margin-left: 20px;
+            position: relative;
 
             &:before {
                 content: "";
@@ -114,6 +145,8 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
         margin-bottom: 0;
     }
 
@@ -121,7 +154,8 @@ export default {
         color: #a38662;
         font-weight: 600;
         position: absolute;
-        bottom: -20px;
+        top: 10px;
+        left: 10px;
         font-size: 12px;
     }
 
