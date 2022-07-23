@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Items from '../views/Items.vue'
-import Curses from '../views/Curses.vue'
-import Potions from '../views/Potions.vue'
-import Hexes from '../views/Hexes.vue'
+import Home from '../views/Home.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,22 +7,22 @@ const router = createRouter({
         {
             path: '/relics',
             name: 'relics',
-            component: Items
+            component: Home
         },
         {
             path: '/curses',
             name: 'curses',
-            component: Curses
+            component: Home
         },
         {
             path: '/potions',
             name: 'potions',
-            component: Potions
+            component: Home
         },
         {
             path: '/hexes',
             name: 'hexes',
-            component: Hexes
+            component: Home
         }
     ]
 })
