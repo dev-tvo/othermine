@@ -80,7 +80,7 @@ export default {
 .tabs {
     display: flex;
     justify-content: space-between;
-    max-width: 170px;
+    max-width: 220px;
     margin: 0 auto;
 
     .tab-link {
@@ -116,12 +116,12 @@ export default {
 
         &.router-link-active {
             .line-left {
-                right: 20px;
+                right: 15px;
                 opacity: 1;
             }
 
             .line-right {
-                left: 20px;
+                left: 15px;
                 opacity: 1;
             }
         }
