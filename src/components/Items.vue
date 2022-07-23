@@ -18,7 +18,6 @@ export default {
         }
     },
     computed: {
-
     },
     methods: {
         itemSearch() {
@@ -34,12 +33,13 @@ export default {
                 event.rarity.toLowerCase().includes(this.input)
 
             this.data = result.filter(filter)
+            console.log(this.data)
             this.calculateHeight()
         },
         returnCorrectData() {
-            if (this.$route.name == 'relics') {
+            if (this.$route.name === 'relics') {
                 this.data = itemList
-            } else if (this.$route.name == 'curses') {
+            } else if (this.$route.name === 'curses') {
                 this.data = curseList
             } else {
                 this.data = potionList
