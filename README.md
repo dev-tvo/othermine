@@ -16,6 +16,11 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+### If you get sass error, run this
+```sh
+ npm install -D sass-loader node-sass
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
