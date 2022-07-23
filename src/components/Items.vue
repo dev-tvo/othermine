@@ -3,7 +3,6 @@ import Item from './Item.vue'
 import itemList from '../data/items.js'
 import curseList from '../data/curses.js'
 import potionList from '../data/potions.js'
-import hexList from '../data/hexes.js'
 
 export default {
     components: {
@@ -25,6 +24,7 @@ export default {
         itemSearch() {
             let result = itemList
             if (!this.input) {
+                this.calculateHeight()
                 return result
             }
 
@@ -34,17 +34,26 @@ export default {
                 event.rarity.toLowerCase().includes(this.input)
 
             this.data = result.filter(filter)
+            this.calculateHeight()
         },
         returnCorrectData() {
             if (this.$route.name == 'relics') {
                 this.data = itemList
             } else if (this.$route.name == 'curses') {
                 this.data = curseList
-            } else if (this.$route.name == 'potions') {
-                this.data = potionList
             } else {
-                this.data = hexList 
+                this.data = potionList
             }
+        },
+        calculateHeight() {
+            setTimeout(() => {
+                var height = document.querySelector('.container').clientHeight
+                if (height < 800) {
+                    document.querySelector('.wrapper').style.height = '100vh'
+                } else {
+                    document.querySelector('.wrapper').style.height = height + 70 + 'px'
+                }
+            }, 50);
         }
     },
     watch: {
@@ -59,6 +68,7 @@ export default {
     },
     mounted: function () {
         this.returnCorrectData()
+        // this.calculateHeight()
     }
 }
 </script>
@@ -77,6 +87,7 @@ export default {
 <style lang="scss">
 .items {
     flex-wrap: wrap;
+    // position: relative;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;

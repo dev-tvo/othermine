@@ -9,6 +9,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "jquery": "^3.6.0",
+    "pinia": "^2.0.16",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2",
     "vue3-lazy": "^1.0.0-alpha.1",

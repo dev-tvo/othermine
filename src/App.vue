@@ -1,9 +1,11 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import Items from './components/Items.vue'
+import Search from "./components/Search.vue";
 
 export default {
     components: {
+      Search,
         Items,
     },
     data() {
@@ -44,6 +46,7 @@ export default {
                     <div class="line line-right"></div>
                 </RouterLink>
             </div>
+          <Search></Search>
         </header>
         <RouterView />
         <footer>
