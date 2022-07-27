@@ -10,10 +10,10 @@ const app = createApp(App)
 
 app.use(pinia)
 app.use(router)
-app.use(lazyPlugin, {
-    loading: 'src/assets/images/loading-small.svg',
-    error: 'src/assets/images/error.png'
-})
+// app.use(lazyPlugin, {
+//     loading: 'src/assets/images/loading-small.svg',
+//     error: 'src/assets/images/error.png'
+// })
 
 app.mixin({
     data() {

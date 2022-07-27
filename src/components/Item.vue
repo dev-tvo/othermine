@@ -10,13 +10,13 @@ export default {
             showInfo: false,
         }
     },
-    props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description'],
+    props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description']
 }
 </script>
 
 <template>
     <div class="item">
-        <img v-lazy="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" />
+        <img :src="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" />
         <div class="item-info" v-if="showInfo">
             <div class="item-header">
                 <div class="item-id">Index no. {{ id }}</div>
