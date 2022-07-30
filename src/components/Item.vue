@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-            showInfo: false,
+            showInfo: false
         }
     },
     props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description']
@@ -33,7 +33,6 @@ export default {
             <div class="item-craftingcost">Crafting cost: <span>{{ craftingCost }}</span></div>
             <div class="item-minor-curse-cost item-curse-cost">Minor curse cost: <span>{{ minorCurseCost }}</span></div>
             <div class="item-major-curse-cost item-curse-cost">Major curse cost: <span>{{ majorCurseCost }}</span></div>
-
         </div>
     </div>
 </template>

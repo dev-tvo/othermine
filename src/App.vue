@@ -74,9 +74,12 @@ export default {
     z-index: -1;
 }
 
-// .wrapper {
-//     background: url(src/assets/images/checker.png) center center/cover;
-// }
+.wrapper {
+    // background: url(src/assets/images/checker.png) center center/cover;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
 
 .tabs {
     display: flex;
@@ -148,10 +151,11 @@ footer {
     background: #222;
     justify-content: space-between;
     padding: 20px;
-    margin-left: 320px;
+    margin-left: 300px;
     z-index: 2;
     align-items: center;
     position: relative;
+    margin-top: auto;
 
     .footer-left {
         ul {
