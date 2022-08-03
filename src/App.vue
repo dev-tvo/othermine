@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss">
 .overlay {
-    background: url(./src/assets/images/checker.png) center center/cover;
+    background: url('/src/assets/images/checker.png') center center/cover;
     position: fixed;
     top: 0;
     left: 0;
