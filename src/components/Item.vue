@@ -116,13 +116,13 @@ export default {
     }
 
     .item-minor-curse-cost span::before {
-        background-image: url("src/assets/images/gems/MinorCurse.png");
+        background-image: url("/src/assets/images/gems/MinorCurse.png");
         left: -20px;
 
     }
 
     .item-major-curse-cost span::before {
-        background-image: url("src/assets/images/gems/MajorCurse.png");
+        background-image: url("/src/assets/images/gems/MajorCurse.png");
         width: 15px;
         left: -17px;
     }
@@ -214,7 +214,7 @@ export default {
 
             &:before {
                 content: "";
-                background-image: url("src/assets/images/gems/Thorium1.png");
+                background-image: url("/src/assets/images/gems/Thorium1.png");
                 position: absolute;
                 width: 20px;
                 height: 30px;
@@ -235,7 +235,7 @@ export default {
 
             &:before {
                 content: "";
-                background-image: url("src/assets/images/gems/Gold10.png");
+                background-image: url("/src/assets/images/gems/Gold10.png");
                 position: absolute;
                 position: absolute;
                 width: 30px;
@@ -256,7 +256,7 @@ export default {
 
             &:before {
                 content: "";
-                background-image: url("src/assets/images/gems/MajorCurse.png");
+                background-image: url("/src/assets/images/gems/MajorCurse.png");
                 position: absolute;
                 width: 20px;
                 height: 30px;
