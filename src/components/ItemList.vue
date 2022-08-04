@@ -47,10 +47,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .items {
     flex-wrap: wrap;
-    // position: relative;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;
@@ -68,7 +67,7 @@ export default {
 
         &.Hex {
             img {
-                width: 80px;
+                width: 90px;
             }
         }
 
@@ -80,7 +79,7 @@ export default {
             cursor: pointer;
 
             img {
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
     }
