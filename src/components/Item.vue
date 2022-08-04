@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="item">
+    <div :class="'item ' + itemType">
         <img :src="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" />
         <div class="item-info" v-if="showInfo">
             <div class="item-header">
@@ -37,33 +37,6 @@ export default {
         </div>
     </div>
 </template>
-<!--
-<template>
-    <div class="item">
-        <Popper locked="true" hover>
-            <img v-lazy="imageUrl" />
-            <template #content>
-                <div class="item-info">
-                    <div class="item-header">
-                        <div class="item-id">Index no. {{ id }}</div>
-                        <div class="item-name">{{ name }}</div>
-                    </div>
-                    <div class="item-subname">{{ subName }}</div>
-                    <div class="divider"></div>
-                    <div :class="'curse-type ' + curseType" v-if="curseType">Type: <span>{{ curseType }} curse</span></div>
-                    <div :class="'item-type ' + itemType" v-else>Type: <span>{{ itemType }}</span></div>
-                    <div :class="'item-rarity ' + rarity">Rarity: <span>{{ rarity }}</span></div>
-                    <div class="item-craftingcost">Crafting cost: <span>{{ craftingCost }}</span></div>
-                    <div class="item-shopcost">Shop cost: <span>{{ shopCost }}</span></div>
-                    <div class="item-minor-curse-cost item-curse-cost">Minor curse cost: <span>{{ minorCurseCost }}</span></div>
-                    <div class="item-major-curse-cost item-curse-cost">Major curse cost: <span>{{ majorCurseCost }}</span></div>
-                    <div class="item-effect">Effect: <span>{{ effect }}</span></div>
-                    <div class="item-description">Description: <span>{{ description }}</span></div>
-                </div>
-            </template>
-        </Popper>
-    </div>
-</template> -->
 
 <style lang="scss">
 .popover-body,
@@ -74,15 +47,6 @@ export default {
     top: 0px;
     padding: 30px 20px 0 20px;
     height: 100%;
-    // width: 500px;
-    // background-color: #001B24;
-    // pointer-events: none;
-    // z-index: 99;
-    // padding: 20px;
-    // border-color: #000F14;
-    // border-radius: 10px;
-    // border-style: solid;
-    // border-width: 2px;
 
     .divider {
         background: white;

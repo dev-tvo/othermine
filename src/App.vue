@@ -4,7 +4,7 @@ import Search from "./components/Search.vue";
 
 export default {
     components: {
-      Search,
+        Search,
     },
     data() {
         return {
@@ -44,17 +44,17 @@ export default {
                     <div class="line line-right"></div>
                 </RouterLink>
             </div>
-          <Search></Search>
+            <Search></Search>
         </header>
         <RouterView />
         <footer>
             <div class="footer-left">
                 <ul>
-                    <li>Mail me; undermined@gmail.com</li>
+                    <li>Mail us; othermine@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-right">
-                <img src="/src/assets/logo.svg" alt="">
+                <img src="/src/assets/scale.png" alt="">
             </div>
             <!-- <div class="footer-right">
                 <img src="/src/assets/images/PeasantPilfer.png" alt="">
@@ -150,7 +150,7 @@ footer {
     display: flex;
     background: #222;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px 20px;
     margin-left: 300px;
     z-index: 2;
     align-items: center;
@@ -170,7 +170,9 @@ footer {
     }
 
     .footer-right {
-        width: 50px;
+        img {
+            height: 80px;
+        }
     }
 }
 </style>

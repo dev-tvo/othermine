@@ -25,34 +25,6 @@ a,
     top: 0;
 }
 
-.search-wrapper {
-    position: absolute;
-    height: 50px;
-    right: 20px;
-    top: 20px;
-    background: #33312c;
-    border-radius: 10px;
-}
-
-.search {
-    height: 50px;
-    padding: 0 0 0 10px;
-    border: none;
-    width: 250px;
-    border-radius: 10px;
-    background: transparent;
-    border: 2px solid #e8ab43;
-    color: white;
-}
-
-.search::placeholder {
-    color: #fff;
-}
-
-.search:focus {
-    outline: none;
-}
-
 i {
     position: absolute;
     right: 0;
