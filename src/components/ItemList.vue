@@ -10,8 +10,9 @@
 <script>
 // Stores
 import { useItemListStore } from "@/stores/itemList"
+
 // Components
-import Item from "./Item.vue";
+import Item from "./Item.vue"
 
 export default {
     setup() {

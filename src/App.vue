@@ -1,8 +1,14 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import Search from "./components/Search.vue";
+import { useItemListStore } from "@/stores/itemList"
 
 export default {
+    setup() {
+        const itemListStore = useItemListStore()
+
+        return { itemListStore }
+    },
     components: {
         Search,
     },
@@ -13,14 +19,16 @@ export default {
     watch: {},
     methods: {
     },
-    mounted() { }
+    mounted() {
+    }
 }
 
 </script>
 
 <template>
     <div class="wrapper">
-        <div class="overlay"></div>
+        <div class="background-darken"></div>
+        <div class="overlay" v-if="itemListStore.showOverlay == true" @click="itemListStore.showOverlay = false, itemListStore.clickShowInfo = false"></div>
         <header>
             <div class="tabs">
                 <RouterLink to="/relics" class="tab-link">
@@ -56,15 +64,22 @@ export default {
             <div class="footer-right">
                 <img src="/src/assets/scale.png" alt="">
             </div>
-            <!-- <div class="footer-right">
-                <img src="/src/assets/images/PeasantPilfer.png" alt="">
-            </div> -->
         </footer>
     </div>
 </template>
 
 <style lang="scss">
 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgb(0 0 0 / 50%);
+}
+
+.background-darken {
     background: url('/src/assets/images/checker.png') center center/cover;
     position: fixed;
     top: 0;
@@ -89,6 +104,20 @@ export default {
 
     .tab-link {
         position: relative;
+
+        .tab {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0px;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
         .line {
             height: 2px;
@@ -118,6 +147,18 @@ export default {
             }
         }
 
+        &:hover {
+            .line-left {
+                right: 17px;
+                opacity: 1;
+            }
+
+            .line-right {
+                left: 17px;
+                opacity: 1;
+            }
+        }
+
         &.router-link-active {
             .line-left {
                 right: 15px;
@@ -128,20 +169,6 @@ export default {
                 left: 15px;
                 opacity: 1;
             }
-        }
-    }
-
-    .tab {
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0px;
-        position: relative;
-
-        &:hover {
-            cursor: pointer;
         }
     }
 }

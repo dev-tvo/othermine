@@ -8,7 +8,7 @@
 import ItemList from "../components/ItemList.vue";
 export default {
   name: "Home",
-  components: {ItemList}
+  components: { ItemList }
 }
 </script>
 

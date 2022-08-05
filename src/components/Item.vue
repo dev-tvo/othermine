@@ -1,23 +1,42 @@
 <script>
 import Popper from "vue3-popper";
+import { useItemListStore } from "@/stores/itemList"
 
 export default {
+    setup() {
+        const itemListStore = useItemListStore()
+
+        return { itemListStore }
+    },
+    props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description'],
     components: {
         Popper
     },
+    watch: {
+    },
     data() {
         return {
-            showInfo: false,
+            showInfo: false
         }
     },
-    props: ['id', 'itemType', 'imageUrl', 'name', 'subName', 'rarity', 'craftingCost', 'shopCost', 'minorCurseCost', 'majorCurseCost', 'curseType', 'effect', 'description']
+    methods: {
+
+    },
+    mounted() {
+        window.addEventListener('keydown', (e) => {
+            if (e.key == 'Escape') {
+                this.itemListStore.clickShowInfo = false
+                this.itemListStore.showOverlay = false
+            }
+        })
+    }
 }
 </script>
 
 <template>
     <div :class="'item ' + itemType">
-        <img :src="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" />
-        <div class="item-info" v-if="showInfo">
+        <img :src="imageUrl" @mouseover="showInfo = true" @mouseleave="showInfo = false" @click="itemListStore.clickShowInfo = true, itemListStore.showOverlay = true" />
+        <div class="item-info" :class="{ 'active': itemListStore.clickShowInfo == true }" v-if="showInfo || itemListStore.clickShowInfo">
             <div class="item-header">
                 <div class="item-id">Index no. {{ id }}</div>
                 <div class="item-name">{{ name }}</div>
@@ -39,7 +58,6 @@ export default {
 </template>
 
 <style lang="scss">
-.popover-body,
 .item-info {
     width: 300px;
     left: 0;
@@ -47,6 +65,16 @@ export default {
     top: 0px;
     padding: 30px 20px 0 20px;
     height: 100%;
+
+    &.active {
+        width: 500px;
+        background: #222;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        z-index: 6;
+    }
 
     .divider {
         background: white;
