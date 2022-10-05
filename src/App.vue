@@ -56,9 +56,6 @@ export default {
             <div class="footer-right">
                 <img src="/src/assets/scale.png" alt="">
             </div>
-            <!-- <div class="footer-right">
-                <img src="/src/assets/images/PeasantPilfer.png" alt="">
-            </div> -->
         </footer>
     </div>
 </template>
@@ -75,7 +72,6 @@ export default {
 }
 
 .wrapper {
-    // background: url(src/assets/images/checker.png) center center/cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -89,6 +85,20 @@ export default {
 
     .tab-link {
         position: relative;
+
+        .tab {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0px;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
         .line {
             height: 2px;
@@ -118,6 +128,18 @@ export default {
             }
         }
 
+        &:hover {
+            .line-left {
+                right: 17px;
+                opacity: 1;
+            }
+
+            .line-right {
+                left: 17px;
+                opacity: 1;
+            }
+        }
+
         &.router-link-active {
             .line-left {
                 right: 15px;
@@ -128,20 +150,6 @@ export default {
                 left: 15px;
                 opacity: 1;
             }
-        }
-    }
-
-    .tab {
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0px;
-        position: relative;
-
-        &:hover {
-            cursor: pointer;
         }
     }
 }
