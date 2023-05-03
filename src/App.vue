@@ -1,5 +1,4 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router'
 import Search from "./components/Search.vue";
 
 export default {
@@ -7,13 +6,15 @@ export default {
         Search,
     },
     data() {
-        return {
-        }
+        return {}
     },
     watch: {},
-    methods: {
-    },
-    mounted() { }
+    methods: {},
+    mounted() {
+        if (this.$route.path === "/") {
+            this.$router.push("/relics")
+        }
+    }
 }
 
 </script>
@@ -46,7 +47,7 @@ export default {
             </div>
             <Search></Search>
         </header>
-        <RouterView />
+        <RouterView/>
         <footer>
             <div class="footer-left">
                 <ul>
